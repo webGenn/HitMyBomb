@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+.controls{
+    width: 100%;
+    height: 55px;
+    padding: 5px;
+    background-color: navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.controls .left h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    margin-left: 7px;
+}
+.controls .center h3{
+    color: white;
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.controls .center h3 span{
+    color: yellow;
+}
+.controls .right button{
+    background-color: #EB5406;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 18px;
+}
+#playGame{
+    animation: borderDance 1.5s linear infinite;
+}
+@keyframes borderDance {
+    0%{
+        border: 4px solid green;
+    }
+    20%{
+        border: 4px solid deeppink
+    }
+    40%{
+        border: 4px solid black;
+    }
+    60%{
+        border: 4px solid green;
+    }
+    80%{
+        border: 4px solid red;
+    }
+    100%{
+        border: 4px solid beige;
+    }
+}
+/* --------------------for playground--------------------------- */
+
+.playground{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    height: 650px;
+    overflow: hidden;
+    background: black;
+    position: relative;
+    cursor: pointer;
+}
+.playground .bomb{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-left: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.playground .bombAni{
+    animation: enemyAttack 1s linear infinite;
+}
+
+@keyframes enemyAttack {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}

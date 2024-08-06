@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the obstacle  - Shivansh Tripathi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="controls">
+        <div class="left">
+            <h1>Hit Bomb</h1>
+        </div>
+        <div class="center">
+            <h3>Total : <span id="totalCount"></span></h3>
+        </div>
+        <div class="right">
+            <button id="playGame" onclick="startPlay()">Start Game</button>
+        </div>
+    </div>
+    <div class="playground">
+        <img src="obstacle.webp" class="bomb" id="bomb" onclick="hitObstacle()">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
